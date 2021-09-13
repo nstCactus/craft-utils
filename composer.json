@@ -1,0 +1,18 @@
+{
+    "name": "nstcactus/craft-utils",
+    "description": "A collection of utility classes to make my life easier when working on Craft CMS projects",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "nstcactus\\CraftUtils\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "nstCactus",
+            "email": "nstCactus@gmail.com"
+        }
+    ],
+    "require": {}
+}
