@@ -5,11 +5,13 @@ namespace nstcactus\CraftUtils;
 use Craft;
 use craft\events\RegisterComponentTypesEvent;
 use craft\events\RegisterCpNavItemsEvent;
+use craft\events\RegisterEmailMessagesEvent;
 use craft\events\RegisterTemplateRootsEvent;
 use craft\events\RegisterUrlRulesEvent;
 use craft\events\RegisterUserPermissionsEvent;
 use craft\i18n\PhpMessageSource;
 use craft\services\Elements;
+use craft\services\SystemMessages;
 use craft\services\UserPermissions;
 use craft\web\Application as WebApplication;
 use craft\web\twig\variables\Cp;
@@ -407,5 +409,37 @@ class AbstractModule extends Module
     protected function getViewHooks(): array
     {
         return [];
+    }
+
+
+    /**
+     * Register system messages
+     * @see \nstcactus\CraftUtils\AbstractModule::getSystemMessages()
+     */
+    protected function registerSystemMessages(): void
+    {
+        $messages = $this->getSystemMessages();
+        if ($messages) {
+            Event::on(SystemMessages::class, SystemMessages::EVENT_REGISTER_MESSAGES, static function (RegisterEmailMessagesEvent $event) use ($messages) {
+                foreach ($messages as $message) {
+                    $event->messages[] = $message;
+                }
+            });
+        }
+    }
+
+    /**
+     * Return an array of system messages.
+     * Each element must be either a `\craft\models\SystemMessage` instance or an associative arrays with the following keys:
+     *   - `key`
+     *   - `heading`
+     *   - `subject`
+     *   - `body`
+     * @return ?array
+     * @see \craft\events\RegisterEmailMessagesEvent
+     */
+    protected function getSystemMessages(): ?array
+    {
+        return null;
     }
 }
