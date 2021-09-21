@@ -66,7 +66,7 @@ class AbstractModule extends Module
 
     /**
      * Register a translation category for the module.
-     * @see \modules\AbstractModule::getTranslationCategory()
+     * @see \nstcactus\CraftUtils\AbstractModule::getTranslationCategory()
      */
     protected function registerTranslationCategory(): void
     {
@@ -87,7 +87,7 @@ class AbstractModule extends Module
 
     /**
      * Register template roots for the control panel
-     * @see \modules\AbstractModule::getCpTemplateRoots()
+     * @see \nstcactus\CraftUtils\AbstractModule::getCpTemplateRoots()
      */
     protected function registerCpTemplateRoots(): void
     {
@@ -100,7 +100,7 @@ class AbstractModule extends Module
 
     /**
      * Register template roots for the site
-     * @see \modules\AbstractModule::getSiteTemplateRoots()
+     * @see \nstcactus\CraftUtils\AbstractModule::getSiteTemplateRoots()
      */
     protected function registerSiteTemplateRoots(): void
     {
@@ -179,7 +179,7 @@ class AbstractModule extends Module
 
     /**
      * Register Twig extensions
-     * @see \modules\AbstractModule::getTwigExtensions()
+     * @see \nstcactus\CraftUtils\AbstractModule::getTwigExtensions()
      */
     protected function registerTwigExtensions(): void
     {
@@ -199,7 +199,7 @@ class AbstractModule extends Module
 
     /**
      * Register CP nav items
-     * @see \modules\AbstractModule::getCpNavItems()
+     * @see \nstcactus\CraftUtils\AbstractModule::getCpNavItems()
      */
     protected function registerCpNavItems(): void
     {
@@ -217,7 +217,7 @@ class AbstractModule extends Module
 
     /**
      * Register user permissions
-     * @see \modules\AbstractModule::getuserPermissions()
+     * @see \nstcactus\CraftUtils\AbstractModule::getuserPermissions()
      */
     protected function registerUserPermissions(): void
     {
@@ -236,7 +236,7 @@ class AbstractModule extends Module
 
     /**
      * Register Craft variable additions
-     * @see \modules\AbstractModule::getVariables()
+     * @see \nstcactus\CraftUtils\AbstractModule::getVariables()
      */
     protected function registerVariables(): void
     {
@@ -257,7 +257,7 @@ class AbstractModule extends Module
 
     /**
      * Register element types
-     * @see \modules\AbstractModule::getElementTypes()
+     * @see \nstcactus\CraftUtils\AbstractModule::getElementTypes()
      */
     protected function registerElementTypes(): void
     {
@@ -288,7 +288,7 @@ class AbstractModule extends Module
 
     /**
      * Register view hooks
-     * @see \modules\AbstractModule::getViewHooks()
+     * @see \nstcactus\CraftUtils\AbstractModule::getViewHooks()
      */
     protected function registerViewHooks(): void
     {
@@ -351,7 +351,7 @@ class AbstractModule extends Module
     /**
      * Return the variables to register
      * @return ?array An associative associative array mapping the variable names to their corresponding class names or instances
-     * @example [ 'breadcrumb' => \modules\breadcrumb\variables\SeoVariable::class ]
+     * @example [ 'breadcrumb' => \nstcactus\CraftUtils\breadcrumb\variables\SeoVariable::class ]
      */
     protected function getVariables(): ?array
     {
