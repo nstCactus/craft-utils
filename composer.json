@@ -14,5 +14,7 @@
             "email": "nstCactus@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "craftcms/cms": "^3.5.0"
+    }
 }
