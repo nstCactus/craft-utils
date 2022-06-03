@@ -224,7 +224,7 @@ class AbstractModule extends Module
                 UserPermissions::class,
                 UserPermissions::EVENT_REGISTER_PERMISSIONS,
                 function (RegisterUserPermissionsEvent $event) use ($permissions) {
-                    $event->permissions = array_merge($event->permissions, $permissions);
+                    $event->permissions = array_merge_recursive($event->permissions, $permissions);
                 }
             );
         }
