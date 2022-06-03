@@ -213,11 +213,11 @@ class AbstractModule extends Module
 
     /**
      * Register user permissions
-     * @see \nstcactus\CraftUtils\AbstractModule::getuserPermissions()
+     * @see \nstcactus\CraftUtils\AbstractModule::getUserPermissions()
      */
     protected function registerUserPermissions(): void
     {
-        $permissions = $this->getuserPermissions();
+        $permissions = $this->getUserPermissions();
 
         if ($permissions) {
             Event::on(
@@ -339,7 +339,7 @@ class AbstractModule extends Module
      * @return ?array An array of user permissions
      * @see https://craftcms.com/docs/3.x/extend/user-permissions.html for details on the syntax of the array
      */
-    protected function getuserPermissions(): ?array
+    protected function getUserPermissions(): ?array
     {
         return null;
     }
