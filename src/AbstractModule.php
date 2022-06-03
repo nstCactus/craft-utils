@@ -55,6 +55,7 @@ class AbstractModule extends Module
     {
         parent::init();
 
+        $this->registerComponents();
         $this->registerTwigExtensions();
         $this->registerCpNavItems();
         $this->registerCpRoutes();
@@ -63,6 +64,15 @@ class AbstractModule extends Module
         $this->registerVariables();
         $this->registerElementTypes();
         $this->registerViewHooks();
+    }
+
+    protected function registerComponents(): void
+    {
+        foreach ($this->getComponentDefinitions() as $componentName => $componentDefinition) {
+            if (!$this->has($componentName)) {
+                $this->set($componentName, $componentDefinition);
+            }
+        }
     }
 
     /**
@@ -435,5 +445,18 @@ class AbstractModule extends Module
     protected function getSystemMessages(): ?array
     {
         return null;
+    }
+
+    /**
+     * Return an associative array of Yii components.
+     * The key is the name of the component, the value is its definition.
+     * The components defined here can be overridden in app.php, by passing an associative array of components to the
+     * module definition array.
+     * @see https://www.yiiframework.com/doc/guide/2.0/en/concept-service-locator
+     * @return array
+     */
+    protected function getComponentDefinitions(): array
+    {
+        return [];
     }
 }
