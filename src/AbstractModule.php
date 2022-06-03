@@ -78,7 +78,7 @@ class AbstractModule extends Module
         if (!isset($i18n->translations[$translationCategory]) && !isset($i18n->translations[$translationCategory . '*'])) {
             $i18n->translations[$translationCategory] = [
                 'class'            => PhpMessageSource::class,
-                'sourceLanguage'   => 'fr-FR',
+                'sourceLanguage'   => 'en',
                 'basePath'         => Craft::getAlias("@modules/$this->id/translations"),
                 'forceTranslation' => true,
                 'allowOverrides'   => true,
