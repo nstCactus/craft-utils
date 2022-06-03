@@ -13,7 +13,6 @@ use craft\i18n\PhpMessageSource;
 use craft\services\Elements;
 use craft\services\SystemMessages;
 use craft\services\UserPermissions;
-use craft\web\Application as WebApplication;
 use craft\web\twig\variables\Cp;
 use craft\web\twig\variables\CraftVariable;
 use craft\web\UrlManager;
@@ -185,17 +184,12 @@ class AbstractModule extends Module
      */
     protected function registerTwigExtensions(): void
     {
-        $twigExtensions = $this->getTwigExtensions();
+         $twigExtensions = $this->getTwigExtensions();
 
         if ($twigExtensions) {
-            Craft::$app->on(
-                WebApplication::EVENT_INIT,
-                function () use ($twigExtensions) {
-                    foreach ($twigExtensions as $twigExtension) {
-                        Craft::$app->view->registerTwigExtension($twigExtension);
-                    }
-                }
-            );
+            foreach ($twigExtensions as $twigExtension) {
+                Craft::$app->view->registerTwigExtension($twigExtension);
+            }
         }
     }
 
