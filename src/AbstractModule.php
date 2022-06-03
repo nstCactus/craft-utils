@@ -298,7 +298,7 @@ class AbstractModule extends Module
     }
 
     /**
-     * Return the routes to be added the the default Craft CP routes
+     * Return the routes to be added the default Craft CP routes
      * @return ?array An associative array mapping url rules to the module/controller/action that should handle it
      */
     protected function getCpRoutes(): ?array
@@ -307,7 +307,7 @@ class AbstractModule extends Module
     }
 
     /**
-     * Return the routes to be added the the default Craft site routes
+     * Return the routes to be added the default Craft site routes
      * @return ?array An associative array mapping url rules to the module/controller/action that should handle it
      */
     protected function getSiteRoutes(): ?array
