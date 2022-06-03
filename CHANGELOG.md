@@ -6,6 +6,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [2.0.0] - 2022-06-03
+### Added
+  - Allow declaring permissions nested under Craft core permissions
+  - Add the ability to register Yii components that do NOT override those
+    defined in `app.php` 
+### Changed
+  - [BREAKING]: Method `getuserPermissions()` renamed to `getUserPermission()`
+  - Set translations `sourceLanguage` to english
+### Fixed
+  - Load twig extensions [the recommanded way](https://craftcms.com/docs/3.x/extend/extending-twig.html#register-a-twig-extension)
+    This fixes a bug when running functional tests on a site that uses twig 
+    extensions
+
 ## [1.1.0] - 2021-09-21
 ### Added
   - Easily register system messages 
