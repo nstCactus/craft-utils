@@ -24,9 +24,9 @@ use yii\base\Module;
  * This base class for custom modules aims at making less painful to create a Craft module.
  * Most of the time, all you have to do to register/customize the following components is to override the corresponding
  * getter:
- *   - translation cateory (resonnable default value provided)
- *   - CP template roots (resonnable default value provided)
- *   - site template roots (resonnable default value provided)
+ *   - translation category (reasonable default value provided)
+ *   - CP template roots (reasonable default value provided)
+ *   - site template roots (reasonable default value provided)
  *   - twig extensions
  *   - CP nav items
  *   - CP routes
@@ -282,7 +282,7 @@ class AbstractModule extends Module
     /**
      * Register Yii aliases.
      * The default implementation adds an `@modules/<handle>` & a `@<namespace>` alias.
-     * Example: For a module having the handle `custom-mobule` in the `\modules\lhs\customModule` namespace, the following
+     * Example: For a module having the handle `custom-module` in the `\modules\lhs\customModule` namespace, the following
      * aliases will be added: `@modules/custom-module` & `@modules/lhs/customModule`
      */
     protected function registerAliases(): void
@@ -356,7 +356,7 @@ class AbstractModule extends Module
 
     /**
      * Return the variables to register
-     * @return ?array An associative associative array mapping the variable names to their corresponding class names or instances
+     * @return ?array An associative array mapping the variable names to their corresponding class names or instances
      * @example [ 'breadcrumb' => \nstcactus\CraftUtils\breadcrumb\variables\SeoVariable::class ]
      */
     protected function getVariables(): ?array
