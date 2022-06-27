@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [3.0.0] — 2022-06-27
+### Changed
+  - [BREAKING]: Craft 4 compatibility
+
 ## [2.0.1] — 2022-06-27
 ### Fixed
   - Fix a bug that caused system messages not to be registered
@@ -41,7 +45,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - Easily register custom element types
   - Easily register view hooks
 
-[Unreleased]: https://github.com/nstCactus/craft-utils/compare/1.1.0...HEAD
+[Unreleased]: https://github.com/nstCactus/craft-utils/compare/3.0.0...HEAD
+[3.0.0]: https://github.com/nstCactus/craft-utils/compare/2.0.1...3.0.0
 [2.0.1]: https://github.com/nstCactus/craft-utils/compare/2.0.0...2.0.1
 [2.0.0]: https://github.com/nstCactus/craft-utils/compare/1.1.0...2.0.0
 [1.1.0]: https://github.com/nstCactus/craft-utils/compare/1.0.0...1.1.0
