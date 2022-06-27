@@ -68,6 +68,7 @@ class AbstractModule extends Module
         $this->registerVariables();
         $this->registerElementTypes();
         $this->registerViewHooks();
+        $this->registerSystemMessages();
     }
 
     /**
