@@ -18,6 +18,7 @@ use craft\web\twig\variables\CraftVariable;
 use craft\web\UrlManager;
 use craft\web\View;
 use yii\base\Event;
+use yii\base\InvalidConfigException;
 use yii\base\Module;
 
 /**
@@ -51,6 +52,9 @@ class AbstractModule extends Module
         parent::__construct($id, $parent, $config);
     }
 
+    /**
+     * @throws InvalidConfigException
+     */
     public function init()
     {
         parent::init();
@@ -66,6 +70,9 @@ class AbstractModule extends Module
         $this->registerViewHooks();
     }
 
+    /**
+     * @throws InvalidConfigException
+     */
     protected function registerComponents(): void
     {
         foreach ($this->getComponentDefinitions() as $componentName => $componentDefinition) {
