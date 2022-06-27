@@ -15,6 +15,6 @@
         }
     ],
     "require": {
-        "craftcms/cms": "^3.5.0"
+        "craftcms/cms": "^4.0.0"
     }
 }
