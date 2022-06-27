@@ -170,7 +170,7 @@ class AbstractModule extends Module
             Event::on(
                 UrlManager::class,
                 UrlManager::EVENT_REGISTER_CP_URL_RULES,
-                function (RegisterUrlRulesEvent $e) use ($cpRoutes) {
+                static function (RegisterUrlRulesEvent $e) use ($cpRoutes) {
                     $e->rules = array_merge($e->rules, $cpRoutes);
                 }
             );
@@ -189,7 +189,7 @@ class AbstractModule extends Module
             Event::on(
                 UrlManager::class,
                 UrlManager::EVENT_REGISTER_SITE_URL_RULES,
-                function (RegisterUrlRulesEvent $e) use ($siteRoutes) {
+                static function (RegisterUrlRulesEvent $e) use ($siteRoutes) {
                     $e->rules = array_merge($e->rules, $siteRoutes);
                 }
             );
@@ -222,7 +222,7 @@ class AbstractModule extends Module
             Event::on(
                 Cp::class,
                 Cp::EVENT_REGISTER_CP_NAV_ITEMS,
-                function (RegisterCpNavItemsEvent $e) use ($cpNavItems) {
+                static function (RegisterCpNavItemsEvent $e) use ($cpNavItems) {
                     $e->navItems = array_merge($e->navItems, $cpNavItems);
                 }
             );
@@ -241,7 +241,7 @@ class AbstractModule extends Module
             Event::on(
                 UserPermissions::class,
                 UserPermissions::EVENT_REGISTER_PERMISSIONS,
-                function (RegisterUserPermissionsEvent $event) use ($permissions) {
+                static function (RegisterUserPermissionsEvent $event) use ($permissions) {
                     $event->permissions = array_merge_recursive($event->permissions, $permissions);
                 }
             );
@@ -259,7 +259,7 @@ class AbstractModule extends Module
             Event::on(
                 CraftVariable::class,
                 CraftVariable::EVENT_INIT,
-                function (Event $event) use ($variables) {
+                static function (Event $event) use ($variables) {
                     foreach ($variables as $name => $variable) {
                         $event->sender->set($name, $variable);
                     }
@@ -280,7 +280,7 @@ class AbstractModule extends Module
             Event::on(
                 Elements::class,
                 Elements::EVENT_REGISTER_ELEMENT_TYPES,
-                function(RegisterComponentTypesEvent $event) use ($elementTypes) {
+                static function(RegisterComponentTypesEvent $event) use ($elementTypes) {
                     $event->types = array_merge($event->types, $elementTypes);
                 }
             );
