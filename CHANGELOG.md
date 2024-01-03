@@ -11,6 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - add the `MailerComponentConfiguratorModule` class
 
+### Changed
+
+- restore Craft 3 compatibility in addition to Craft 4
+
 
 ## [3.0.0] — 2022-06-27
 
