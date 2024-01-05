@@ -9,7 +9,7 @@ use craft\mail\transportadapters\Smtp;
 use craft\models\MailSettings;
 use yii\base\Module;
 
-class MailerComponentConfiguratorModule extends Module
+class MailerComponentConfiguratorModule extends AbstractModule
 {
     protected const ADAPTER_CLASSNAME_MAILJET = '\\bertoost\\mailjet\\adapters\\MailjetAdapter';
     protected const ADAPTER_CLASSNAME_MAILCHIMP = '\\perfectwebteam\\mailchimptransactional\\mail\\MailchimpTransactionalAdapter';
