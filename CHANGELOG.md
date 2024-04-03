@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- add Craft 5 compatibility
+
+
 ## [3.1.1] - 2024-01-05
 
 ### Fixed
